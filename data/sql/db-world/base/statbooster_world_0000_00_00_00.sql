@@ -4,8 +4,8 @@ INSERT INTO `command`(`name`, `security`, `help`) VALUES ('sb', 3, 'Syntax: .sb 
 DELETE FROM `command` WHERE name='sb additem';
 INSERT INTO `command`(`name`, `security`, `help`) VALUES ('sb additem', 3, 'Syntax: .sb additem <itemid> <count> - tries to add an enchanted item to targeted player.');
 
-DROP TABLE IF EXISTS `statbooster_enchant_template`;
-CREATE TABLE IF NOT EXISTS `statbooster_enchant_template` (
+DROP TABLE IF EXISTS `mod_statbooster_enchant_template`;
+CREATE TABLE IF NOT EXISTS `mod_statbooster_enchant_template` (
   `Id` int unsigned DEFAULT NULL,
   `iLvlMin` int unsigned DEFAULT NULL,
   `iLvlMax` int unsigned DEFAULT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `statbooster_enchant_template` (
   `Note` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `statbooster_enchant_template` (`Id`, `iLvlMin`, `iLvlMax`, `RoleMask`, `ClassMask`, `SubClassMask`, `Description`, `Note`) VALUES
+INSERT INTO `mod_statbooster_enchant_template` (`Id`, `iLvlMin`, `iLvlMax`, `RoleMask`, `ClassMask`, `SubClassMask`, `Description`, `Note`) VALUES
 	(68, 1, 20, 3, 0, 0, '+1 Strength', 'TANK/PHYS - ALL - ALL'),
 	(74, 1, 20, 7, 0, 0, '+1 Agility', 'TANK/PHYS/HYBRID - ALL - ALL'),
 	(79, 1, 20, 12, 0, 0, '+1 Intellect', 'HYBRID/SPELL - ALL - ALL'),
@@ -60,8 +60,8 @@ INSERT INTO `statbooster_enchant_template` (`Id`, `iLvlMin`, `iLvlMax`, `RoleMas
 	(109, 60, 80, 3, 0, 0, '+7 Strength', 'TANK/PHYS - ALL - ALL'),
 	(211, 60, 80, 8, 0, 0, '+7 Spell Power', 'SPELL - ALL - ALL');
 	
-DROP TABLE IF EXISTS `statbooster_enchant_scores`;
-CREATE TABLE IF NOT EXISTS `statbooster_enchant_scores` (
+DROP TABLE IF EXISTS `mod_statbooster_enchant_scores`;
+CREATE TABLE IF NOT EXISTS `mod_statbooster_enchant_scores` (
   `mod_type` int(11) DEFAULT NULL,
   `mod_id` int(11) DEFAULT NULL,
   `subclass` int(11) DEFAULT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `statbooster_enchant_scores` (
   `note` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `statbooster_enchant_scores` (`mod_type`, `mod_id`, `subclass`, `tank_score`, `phys_score`, `spell_score`, `hybrid_score`, `note`) VALUES
+INSERT INTO `mod_statbooster_enchant_scores` (`mod_type`, `mod_id`, `subclass`, `tank_score`, `phys_score`, `spell_score`, `hybrid_score`, `note`) VALUES
 	(0, 44, 0, 1, 2, 0, 1, 'ITEM_MOD_ARMOR_PENETRATION_RATING - ALL'),
 	(0, 38, 0, 1, 2, 0, 1, 'ITEM_MOD_ATTACK_POWER - ALL'),
 	(0, 4, 0, 1, 2, 0, 1, 'ITEM_MOD_STRENGTH - ALL'),

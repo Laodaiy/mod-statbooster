@@ -47,15 +47,15 @@ bool StatBoosterConfig::EnchantScorePool::Load()
     {
         uint32 enchantCount = 0;
 
-        QueryResult qResult = WorldDatabase.Query("SELECT `mod_type`, `mod_id`, `subclass`, `tank_score`, `phys_score`, `spell_score`, `hybrid_score` FROM `statbooster_enchant_scores`");
+        QueryResult qResult = WorldDatabase.Query("SELECT `mod_type`, `mod_id`, `subclass`, `tank_score`, `phys_score`, `spell_score`, `hybrid_score` FROM `mod_statbooster_enchant_scores`");
 
         if (!qResult)
         {
-            LOG_INFO("module", "Failed to load StatBooster enchant scores from statbooster_enchant_scores table.");
+            LOG_INFO("module", "Failed to load StatBooster enchant scores from mod_statbooster_enchant_scores table.");
             return false;
         }
 
-        LOG_INFO("module", "Loading StatBooster enchant scores from statbooster_enchant_scores...");
+        LOG_INFO("module", "Loading StatBooster enchant scores from mod_statbooster_enchant_scores...");
 
         sBoostConfigMgr->EnchantScores.Clear();
 
@@ -137,15 +137,15 @@ bool StatBoosterConfig::EnchantPool::Load()
     {
         uint32 enchantCount = 0;
 
-        QueryResult qResult = WorldDatabase.Query("SELECT `Id`, `iLvlMin`, `iLvlMax`, `RoleMask`, `ClassMask`, `SubClassMask`, `ItemTypeMask` FROM `statbooster_enchant_template`");
+        QueryResult qResult = WorldDatabase.Query("SELECT `Id`, `iLvlMin`, `iLvlMax`, `RoleMask`, `ClassMask`, `SubClassMask`, `ItemTypeMask` FROM `mod_statbooster_enchant_template`");
 
         if (!qResult)
         {
-            LOG_INFO("module", "Failed to load StatBooster enchant definitions from statbooster_enchant_template table.");
+            LOG_INFO("module", "Failed to load StatBooster enchant definitions from mod_statbooster_enchant_template table.");
             return false;
         }
 
-        LOG_INFO("module", "Loading StatBooster enchants from statbooster_enchant_template...");
+        LOG_INFO("module", "Loading StatBooster enchants from mod_statbooster_enchant_template...");
 
         sBoostConfigMgr->EnchantPool.Clear();
 
