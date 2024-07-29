@@ -1,4 +1,5 @@
 #include "StatBoostMgr.h"
+#include <SpellMgr.h>
 
 StatBoostMgr::StatType StatBoostMgr::GetStatTypeFromSubClass(Item* item)
 {
