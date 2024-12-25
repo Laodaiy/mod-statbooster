@@ -1,4 +1,4 @@
-REPLACE INTO `statbooster_enchant_template` (`Id`, `iLvlMin`, `iLvlMax`, `RoleMask`, `ClassMask`, `SubClassMask`, `ItemTypeMask`, `Description`, `Note`) VALUES 
+REPLACE INTO `mod_statbooster_enchant_template` (`Id`, `iLvlMin`, `iLvlMax`, `RoleMask`, `ClassMask`, `SubClassMask`, `ItemTypeMask`, `Description`, `Note`) VALUES 
     (38, 1, 95, 1, 16, 126, 351535086, '+5 DefenseRating', 'TANK - ARMOR - MANY - ALL EXC SH / TAB'),
     (64, 1, 95, 8, 0, 0, 351535086, '+3 Spirit', 'SPELL - ALL - ALL - ALL EXC SH / TAB'),
     (66, 1, 76, 0, 0, 0, 351535086, '+1 Stamina', 'ALL - ALL - ALL - ALL EXC SH / TAB'),
